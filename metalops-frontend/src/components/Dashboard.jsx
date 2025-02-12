@@ -19,7 +19,6 @@ export default function Dashboard() {
 
   function getDash() {
     getDashboardData().then((response) => {
-      console.log(response.data);
       setTotalRevenue(response.data[0]);
       setAmountReceivable(response.data[1]);
       setOrdersDelivered(response.data[2]);

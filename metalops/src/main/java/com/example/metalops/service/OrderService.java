@@ -9,6 +9,7 @@ public interface OrderService {
     List<OrderDto> getAllOrder();
     OrderDto getOrderById(Long orderId);
     List<Double> getDashboardData();
+    List<String> getTopCustomers();
 
 
     //POST Methods

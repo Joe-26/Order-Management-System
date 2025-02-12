@@ -30,6 +30,11 @@ public class OrderController {
         return new ResponseEntity<>(orderService.getDashboardData(), HttpStatus.OK);
     }
 
+    @GetMapping("/top3")
+    public ResponseEntity<List<String>> getTop3() {
+        return new ResponseEntity<>(orderService.getTopCustomers(), HttpStatus.OK);
+    }
+
     //REST API to get Order By ID
     @GetMapping("{id}")
     public ResponseEntity<OrderDto> getOrder(@PathVariable("id") Long orderId){

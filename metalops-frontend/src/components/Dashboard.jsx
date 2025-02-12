@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import { getDashboardData } from '../service/OrderService'
-import { getCustomerCount } from '../service/CustomerService';
+import React, { use, useEffect, useState } from 'react'
+import { getDashboardData, getTopCustomers } from '../service/OrderService'
+import { getCustomer, getCustomerCount } from '../service/CustomerService';
 
 export default function Dashboard() {
   const [totalRevenue, setTotalRevenue] = useState();
@@ -8,6 +8,9 @@ export default function Dashboard() {
   const[ordersDelivered, setOrdersDelivered] = useState();
   const[amountReceivable, setAmountReceivable] = useState();
   const [totalCustomers, setTotalCustomers] = useState();
+  const [customer1, setCustomer1] = useState('');
+  const [customer2, setCustomer2] = useState('');
+  const [customer3, setCustomer3] = useState('');
 
   useEffect(() => {
     getDash();
@@ -26,6 +29,22 @@ export default function Dashboard() {
     getCustomerCount().then((response) => {
       setTotalCustomers(response.data);
     })
+
+    getTopCustomers().then((r) => {
+      getCustomer(r.data[0]).then((response) => {
+        setCustomer1(response.data['name']);
+      });
+      
+      getCustomer(r.data[1]).then((response) => {
+        setCustomer2(response.data['name']);
+      });
+
+      getCustomer(r.data[2]).then((response) => {
+        setCustomer3(response.data['name']);
+      });
+    })
+
+    
   }
 
   return (
@@ -61,9 +80,9 @@ export default function Dashboard() {
           <div className='text-sm'>Top 3 Customers</div>
           <div className='mx-4'>
             <ol className='list-disc'>
-              <li>Customer 1</li>
-              <li>Customer 2</li>
-              <li>Customer 3</li>
+              <li>{customer1}</li>
+              <li>{customer2}</li>
+              <li>{customer3}</li>
             </ol>
           </div>
         </div>

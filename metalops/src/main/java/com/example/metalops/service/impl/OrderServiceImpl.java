@@ -46,6 +46,11 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
+    public List<String> getTopCustomers() {
+        return orderRepository.top3customers();
+    }
+
+    @Override
     public OrderDto createOrder(OrderDto orderDto) {
         Order newOrder = OrderMapper.mapToOrder(orderDto);
         Order savedOrder = orderRepository.save(newOrder);

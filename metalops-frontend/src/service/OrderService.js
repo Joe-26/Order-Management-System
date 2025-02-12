@@ -15,3 +15,5 @@ export const deleteOrder = (orderId) => axios.delete(REST_API_URL + '/' + orderI
 export const getTotalRevenue = () => axios.get(REST_API_URL + '/total-revenue');
 
 export const getDashboardData = () => axios.get(REST_API_URL+ '/dashboard');
+
+export const getTopCustomers = () => axios.get(REST_API_URL + '/top3');

@@ -61,7 +61,7 @@ export default function OrderList() {
       <div className='mt-4'>  
         <table className="table-auto w-full">
           <thead>
-            <tr className='border bg-amber-300'>
+            <tr className='border'>
               <th>Id</th>
               <th>Date</th>
               <th>Order Status</th>

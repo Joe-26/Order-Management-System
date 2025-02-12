@@ -47,38 +47,43 @@ export default function Dashboard() {
   }
 
   return (
-    <div>
-      <div className='grid grid-cols-2 gap-x-4 gap-y-8 p-4'>
+    <div >
+      <div className='px-4 pt-4'>
+        <div className='text-4xl font-[Changa] font-bold'>Business Insights</div>
+        <div className='font-extralight font-[Gudea]'>Stay ahead with data that matters.</div>
+      </div>
+      
+      <div className='grid grid-cols-2 gap-x-4 gap-y-8 p-4 w-full'>
         {/* Card 1 */}
-        <div className='row-span-2 flex flex-col justify-center items-center border-2 rounded-lg shadow-lg p-2'>
-          <div className='text-sm'>Total Revenue</div>
-          <div className='text-3xl'>${totalRevenue}</div>
+        <div className='row-span-2 flex flex-col justify-center items-center border-3 rounded-lg shadow-lg p-2 bg-green-300'>
+          <div className='text-sm font-[Monda]'>Total Revenue</div>
+          <div className='text-3xl font-bold text-green-900'>${totalRevenue}</div>
         </div>
         {/* Card 2 */}
-        <div className='border-2 rounded-lg shadow-lg p-2'>
-          <div className='text-sm'>Orders Delivered</div>
-          <div className='text-3xl'>{ordersDelivered}</div>
+        <div className='border-3 rounded-lg shadow-lg p-2 bg-blue-300'>
+          <div className='text-sm font-[Monda]'>Orders Delivered</div>
+          <div className='text-3xl font-bold text-blue-900'>{ordersDelivered}</div>
         </div>
         {/* Card 3 */}
-        <div className='border-2 rounded-lg shadow-lg p-2'>
-          <div className='text-sm'>Orders Pending</div>
-          <div className='text-3xl'>{ordersPending}</div>
+        <div className='border-3 rounded-lg shadow-lg p-2 bg-rose-300'>
+          <div className='text-sm font-[Monda]'>Orders Pending</div>
+          <div className='text-3xl font-bold text-rose-900'>{ordersPending}</div>
         </div>
         {/* Card 4 */}
-        <div className='col-span-2 border-2 rounded-lg shadow-lg p-2'>
-          <div className='text-sm'>Payments Receivables</div>
-          <div className='text-3xl'>${amountReceivable}</div>
+        <div className='col-span-2 border-3 rounded-lg shadow-lg p-2 bg-orange-300'>
+          <div className='text-sm font-[Monda]'>Payments Receivables</div>
+          <div className='text-3xl font-bold text-orange-900'>${amountReceivable}</div>
         </div>
         {/* Card 5 */}
-        <div className='border-2 rounded-lg shadow-lg p-2 flex flex-col items-center justify-center'>
-          <div className='text-sm'>Total Customers</div>
-          <div className='text-3xl'>{totalCustomers}</div>
+        <div className='border-3 rounded-lg shadow-lg p-2 flex flex-col items-center justify-center bg-green-300'>
+          <div className='text-sm font-[Monda]'>Total Customers</div>
+          <div className='text-3xl font-bold text-green-900'>{totalCustomers}</div>
         </div>
         {/* Card 6 */}
-        <div className='border-2 rounded-lg shadow-lg p-2'>
-          <div className='text-sm'>Top 3 Customers</div>
+        <div className='border-3 rounded-lg shadow-lg p-2 bg-violet-300'>
+          <div className='text-sm font-[Monda]'>Top 3 Customers</div>
           <div className='mx-4'>
-            <ol className='list-disc'>
+            <ol className='list-disc font-bold text-violet-900'>
               <li>{customer1}</li>
               <li>{customer2}</li>
               <li>{customer3}</li>

@@ -32,7 +32,7 @@ export default function CustomerList() {
 
   return (
     <div className='p-4'>
-      <div className='text-2xl'>Customer List</div>
+      <div className='text-2xl font-[Changa] font-bold'>Customer List</div>
 
       {/* Input & Add Button */}
       <div className='mt-4 flex items-center justify-between gap-2'>
@@ -42,7 +42,7 @@ export default function CustomerList() {
           </svg>
           <input 
             type='text' 
-            className='border rounded-full px-3 py-1' 
+            className='border rounded-full px-3 py-1 font-[Gudea]' 
             placeholder='Customer Id'
             value={customerId}
             onChange={(e) => setCustomerId(e.target.value)}
@@ -53,16 +53,16 @@ export default function CustomerList() {
             }}
           />
         </div>
-        <button className='border rounded-lg py-2 px-4 bg-blue-600 text-white text-sm' onClick={addCustomer}>Add Customer</button>
+        <button className='border rounded-lg py-2 px-4 bg-blue-600 text-white text-sm font-[Gudea] font-bold' onClick={addCustomer}>Add Customer</button>
       </div>
 
       {/* Customer Table */}
       <div className='mt-4'>  
         <table className="table-auto border w-full">
           <thead>
-            <tr className='border'>
-              <th>Id</th>
-              <th>Name</th>
+            <tr className='border font-[Gudea]'>
+              <th className='border-r-1'>Id</th>
+              <th className='border-r-1'>Name</th>
               <th>Company</th>
             </tr>
           </thead>
@@ -70,10 +70,10 @@ export default function CustomerList() {
             {
               customers.map(
                 customer => 
-                <tr key={customer.customerId}>
-                  <td className='px-2'>{customer.customerId}</td>
-                  <td>{customer.name}</td>
-                  <td>{customer.companyName}</td>
+                <tr key={customer.customerId} className='font-[Monda]'>
+                  <td className='px-1 text-center border-r-1'>{customer.customerId}</td>
+                  <td className='px-1 border-r-1'>{customer.name}</td>
+                  <td className='px-1'>{customer.companyName}</td>
                   <td>&#9432;</td>
                 </tr>
               )

@@ -105,9 +105,9 @@ export default function AddCustomer() {
 
   function pageTitle() {
     if(id) {
-        return <h2 className='text-2xl'>Update Customer</h2>
+        return <h2 className='text-2xl font-[Changa] font-bold'>Update Customer</h2>
     }else {
-        return <h2 className='text-2xl font-bold'>Add Customer</h2>
+        return <h2 className='text-2xl font-[Changa] font-bold'>Add Customer</h2>
     }
   }
 
@@ -125,9 +125,9 @@ export default function AddCustomer() {
       
       {/* Form */}
       <div className='mt-4'>
-        <form className='flex flex-col gap-4'>
+        <form className='flex flex-col gap-4 font-[Gudea]'>
           <div className='flex flex-col gap-1'>
-            <label htmlFor='name'>Name</label>
+            <label htmlFor='name' className='font-[Monda]'>Name</label>
             <input 
               type='text' 
               id='name' 
@@ -139,7 +139,7 @@ export default function AddCustomer() {
             {errors.name && <div className='text-red-500 text-xs'>{errors.name}</div>}
           </div>
           <div className='flex flex-col gap-1'>
-            <label htmlFor='company'>Company</label>
+            <label htmlFor='company' className='font-[Monda]'>Company</label>
             <input 
               type='text' 
               id='company' 
@@ -151,7 +151,7 @@ export default function AddCustomer() {
             {errors.companyName && <div className='text-red-500 text-xs'>{errors.companyName}</div>}
           </div>
           <div className='flex flex-col gap-1'>
-            <label htmlFor='email'>Email</label>
+            <label htmlFor='email' className='font-[Monda]'>Email</label>
             <input 
               type='email' 
               id='email' 
@@ -163,7 +163,7 @@ export default function AddCustomer() {
             {errors.email && <div className='text-red-500 text-xs'>{errors.email}</div>}
           </div>
           <div className='flex flex-col gap-1'>
-            <label htmlFor='phone'>Contact</label>
+            <label htmlFor='phone' className='font-[Monda]'>Contact</label>
             <input 
               type='text' 
               id='contact' 
@@ -175,7 +175,7 @@ export default function AddCustomer() {
             {errors.contact && <div className='text-red-500 text-xs'>{errors.contact}</div>}
           </div>
           <div className='flex flex-col gap-1'>
-            <label htmlFor='address'>Company Address</label>
+            <label htmlFor='address' className='font-[Monda]'>Company Address</label>
             <textarea 
               id='address' 
               className='border rounded-lg px-3 py-1' 
@@ -185,7 +185,7 @@ export default function AddCustomer() {
             />
             {errors.address && <div className='text-red-500 text-xs'>{errors.address}</div>}
           </div>
-          <button className='border rounded-lg py-2 px-4 bg-blue-600 text-white text-sm' onClick={saveOrUpdateCustomer}>{actionButton()}</button>
+          <button className='border rounded-lg py-2 px-4 bg-blue-600 text-white text-sm font-[Gudea] font-bold' onClick={saveOrUpdateCustomer}>{actionButton()}</button>
         </form>
       </div>
     </div>

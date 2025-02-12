@@ -33,7 +33,7 @@ export default function OrderList() {
 
   return (
     <div className='p-4'>
-      <div className='text-2xl'>Orders</div>
+      <div className='text-2xl font-[Changa] font-bold'>Orders</div>
 
       {/* Input & Add Button */}
       <div className='mt-4 flex items-center justify-between gap-2'>
@@ -43,7 +43,7 @@ export default function OrderList() {
           </svg>
           <input 
             type='text' 
-            className='border rounded-full px-3 py-1' 
+            className='border rounded-full px-3 py-1 font-[Gudea]' 
             placeholder='Order Id'
             value={orderId}
             onChange={(e) => setOrderId(e.target.value)}
@@ -54,33 +54,31 @@ export default function OrderList() {
             }}
           />
         </div>
-        <button className='border rounded-lg py-2 px-4 bg-blue-600 text-white text-sm' onClick={addOrder}>Add Order</button>
+        <button className='border rounded-lg py-2 px-4 bg-blue-600 text-white text-sm font-[Gudea] font-bold' onClick={addOrder}>Add Order</button>
       </div>
 
       {/* Order Table */}
       <div className='mt-4'>  
-        <table className="table-auto w-full">
+        <table className="table-auto border w-full">
           <thead>
-            <tr className='border'>
-              <th>Id</th>
-              <th>Date</th>
-              <th>Order Status</th>
-              <th>Amount</th>
-              <th>Payment Status</th>
-              <th>Info</th>
+            <tr className='border font-[Gudea]'>
+              <th className='border-r-1'>Id</th>
+              <th className='border-r-1'>Date</th>
+              <th className='border-r-1'>Status</th>
+              <th className='border-r-1'>Amount</th>
+              <th className='px-1'>Payment Status</th>
             </tr>
           </thead>
           <tbody>
             {
               orders.map(
                 order => 
-                <tr key={order.orderId} className='border'>
-                  <td className='px-2'>{order.orderId}</td>
-                  <td className='px-2'>{format(new Date(order.orderDate), "MM/dd/yy")}</td>
-                  <td>{order.orderStatus}</td>
-                  <td>${order.totalAmount}</td>
-                  <td className='flex justify-end px-2'>{order.paymentStatus}</td>
-                  <td>&#9432;</td>
+                <tr key={order.orderId} className=''>
+                  <td className='px-1 border-r-1 text-center'>{order.orderId}</td>
+                  <td className='px-1 border-r-1'>{format(new Date(order.orderDate), "MM/dd/yy")}</td>
+                  <td className='px-1 border-r-1'>{order.orderStatus}</td>
+                  <td className='px-1 border-r-1'>${order.totalAmount}</td>
+                  <td className='flex justify-end px-1'>{order.paymentStatus} &#9432;</td>
                 </tr>
               )
             }

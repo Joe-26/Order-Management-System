@@ -94,9 +94,9 @@ export default function AddOrder() {
 
   function pageTitle() {
     if(id) {
-      return <div className='text-2xl font-bold'>Update/Edit Order</div>
+      return <div className='text-2xl font-[Changa] font-bold'>Update/Edit Order</div>
     } else {
-      return <div className='text-2xl font-bold'>New Order</div>
+      return <div className='text-2xl font-[Changa] font-bold'>New Order</div>
     }
   }
 
@@ -114,9 +114,9 @@ export default function AddOrder() {
 
       {/* Form */}
       <div className='mt-4'>
-        <form className='flex flex-col gap-4'>
+        <form className='flex flex-col gap-4 font-[Gudea]'>
           <div className='flex flex-col gap-1'>
-            <label htmlFor='customerId'>Customer ID</label>
+            <label htmlFor='customerId' className='font-[Monda]'>Customer ID</label>
             <input 
               type='number' 
               id='customerId' 
@@ -129,7 +129,7 @@ export default function AddOrder() {
           </div>
 
           <div className='flex flex-col gap-1'>
-            <label htmlFor='orderDate'>Order Date</label>
+            <label htmlFor='orderDate' className='font-[Monda]'>Order Date</label>
             <input 
               type='date' 
               id='orderDate' 
@@ -143,7 +143,7 @@ export default function AddOrder() {
 
           <div className='flex flex-col gap-1'>
             <div>
-              <label htmlFor='orderStatus'>Order Status</label>
+              <label htmlFor='orderStatus' className='font-[Monda]'>Order Status</label>
             </div>
             <div className='flex gap-2'>
               <input 
@@ -186,7 +186,7 @@ export default function AddOrder() {
           </div>
 
           <div className='flex flex-col gap-1'>
-            <label htmlFor='amount'>Total Amount (in USD)</label>
+            <label htmlFor='amount' className='font-[Monda]'>Total Amount (in USD)</label>
             <input 
               type='text' 
               id='amount' 
@@ -200,7 +200,7 @@ export default function AddOrder() {
 
           <div className='flex flex-col gap-1'>
             <div>
-                <label htmlFor='paymentStatus'>Payment Status</label>
+                <label htmlFor='paymentStatus' className='font-[Monda]'>Payment Status</label>
               </div>
               <div className='flex gap-2'>
                 <input 
@@ -233,7 +233,7 @@ export default function AddOrder() {
               </div>
           </div>
 
-          <button className='border rounded-lg py-2 px-4 bg-blue-600 text-white text-sm' onClick={saveOrUpdateOrder}>{actionButton()}</button>
+          <button className='border rounded-lg py-2 px-4 bg-blue-600 text-white text-sm font-[Gudea] font-bold' onClick={saveOrUpdateOrder}>{actionButton()}</button>
         </form>
       </div>
 

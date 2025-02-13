@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface OrderRepository extends JpaRepository<Order, Long> {
-    @Query("SELECT ROUND(SUM(totalAmount), 2) FROM Order")
+    @Query("SELECT ROUND(SUM(totalAmount), 2) FROM Order WHERE paymentStatus = 'Paid'")
     Double sumTotal();
 
     @Query("SELECT COUNT(orderStatus) FROM Order WHERE orderStatus = 'Delivered'")

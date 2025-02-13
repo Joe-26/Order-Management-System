@@ -1,4 +1,4 @@
-# METALOPS - Order Management System  
+# METALOPS
 
 <img width="1822" alt="app_screenshot" src="https://github.com/user-attachments/assets/eaada69c-2997-46bb-ab03-efb3af267a23">
 

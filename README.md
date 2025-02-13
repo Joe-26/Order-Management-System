@@ -1,5 +1,7 @@
 # METALOPS - Order Management System  
 
+<img width="1822" alt="app_screenshot" src="https://github.com/user-attachments/assets/eaada69c-2997-46bb-ab03-efb3af267a23">
+
 ## 🛠 Overview  
 **METALOPS** is a robust **Order Management System** designed for warehouses and similar businesses to efficiently manage customers, orders, and order statuses. The application provides a **dashboard** that offers valuable business insights, such as:  
 - **Total Revenue**  
